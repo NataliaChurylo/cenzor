@@ -1,0 +1,12 @@
+<div class="container">
+  <p class="bad">Bad words: <span class="badWords">{{stringWords}}</span></p>
+  <form>
+    <input type="text" placeholder="Please write a word!" class="form-control" [(ngModel)]="word" name="word" [class.invalid] = 'validInput'>
+    <div class="button-group">
+      <button type="button" class="btn btn-warning size" (click)="addWords()">Add</button>
+      <button type="button" class="btn btn-danger size" (click)="resetArea()">Reset</button>
+    </div>
+    <textarea placeholder="Text here..." class="form-control" [(ngModel)]="textValue" name="textValue" [class.invalid] = 'validArea'></textarea>
+    <button type="button" class="btn btn-success btn-block" (click)="cenzorWords()">Cenzor</button>
+  </form>
+</div>
